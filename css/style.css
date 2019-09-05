@@ -8,17 +8,20 @@ a{text-decoration: none;}
 ul{list-style: none;}
 img{max-width: 100%;}
 /*================== Container Principal =============================*/
-.container{
-  border: 1px solid red;
+main{
+  width: 90%;
+  margin: 0 auto;
+}
+.container{  
   display: flex;
   height: auto;
 }
 #menu{
-  border: 1px solid #000;
+  /*border: 1px solid #000;*/
   width: 0;
 }
 #conteudo{
-  border: 1px solid #000;
+  /*border: 1px solid #000;*/
   width: 100%;
   height: auto;
   background-color: #ccc;
@@ -46,6 +49,7 @@ img{max-width: 100%;}
   flex-wrap: wrap;
   background-color: #fff;
   transition: 1s;
+  background-color: #eee;
 }
 .img_perfil{
   width: 60% !important;
@@ -53,7 +57,7 @@ img{max-width: 100%;}
   margin: 10px auto;
   border-radius: 50%;
   padding: 2px;
-  background-color: #eee;
+  background-color: #ccc;
 }
 /*---------- Class info ----------*/
 .info{
@@ -65,12 +69,15 @@ img{max-width: 100%;}
 .info h2{
   text-align: center;
   border-bottom: 2px solid tomato;
-  width: 60%;
+  width: 80%;
+  font-size: 1.6rem;
+  padding: 10px;
 }
 .info p{
   font-size: 0.9rem;
   text-align: center;
-  padding: 20px 0;
+  padding: 20px 0px; 
+  width: 200px;
 }
 .info-lista ul{
   width: 75%;
@@ -101,6 +108,7 @@ img{max-width: 100%;}
 .imagens{
   position: absolute;
 }
+
 #botoes{
   display: flex;
   flex-direction: column;
@@ -110,7 +118,6 @@ img{max-width: 100%;}
 #botoes {
   margin-top: -45%;
   z-index: 3;
-  border: 1px solid #000;
 }
 #botoes li{
   background: #fff;
@@ -138,9 +145,9 @@ img{max-width: 100%;}
     display: none !important;    
   } 
   #menu{
-    width: 40% !important;    
+    width: 28% !important;    
   }
   #conteudo{
-    width: 60% !important;    
+    width: 70% !important;    
   }
 }
