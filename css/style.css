@@ -52,9 +52,42 @@ img{max-width: 100%;}
   padding: 2px;
   background-color: #eee;
 }
-#contraction{
-  
+/*---------- Class info ----------*/
+.info{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-items: center;
 }
+.info h2{
+  text-align: center;
+  border-bottom: 2px solid tomato;
+  width: 60%;
+}
+.info p{
+  font-size: 0.9rem;
+  text-align: center;
+  padding: 20px 0;
+}
+.info-lista ul{
+  width: 75%;
+  margin: 10px auto;
+}
+.info-lista ul li{
+  padding: 10px 5px;
+}
+.info-lista ul li:hover{
+  border-bottom: 2px solid tomato;
+}
+.info-lista ul li a{
+  display: flex;
+}
+.info-lista ul li a i{
+  display: flex;
+  justify-content: end;
+  font-size: 1.6em;
+}
+
 /*================== Tela Esquerda ===================================*/
 #expansion{
   
