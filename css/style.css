@@ -28,14 +28,16 @@ img{max-width: 100%;}
 }
 /*================== Botões ====================================*/
 #contraction, #expansion{
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   border-radius: 50%;
-  line-height: 30px;
+  line-height: 40px;
+  font-size: 1.9rem;
   text-align: center;
   color: #fff;
   cursor: pointer;
   background: linear-gradient(to right, crimson, orange);  
+  z-index: 1;  
 }
 /*================== Tela Direita ====================================*/
 #menu{
@@ -43,6 +45,7 @@ img{max-width: 100%;}
   flex-direction: column;
   flex-wrap: wrap;
   background-color: #fff;
+  transition: 1s;
 }
 .img_perfil{
   width: 60% !important;
@@ -89,8 +92,38 @@ img{max-width: 100%;}
 }
 
 /*================== Tela Esquerda ===================================*/
-#expansion{
-  
+#conteudo{
+  display: flex;  
+  justify-content: start;
+  position: relative;
+  transition: 1s;
+}
+.imagens{
+  position: absolute;
+}
+#botoes{
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+/* bolas  */
+#botoes {
+  margin-top: -45%;
+  z-index: 3;
+  border: 1px solid #000;
+}
+#botoes li{
+  background: #fff;
+  border: 2px solid orange;
+  width: 20px;
+  height: 20px;
+  border-radius: 100%;
+  cursor: pointer;
+  margin-left: 5px;
+  margin-top: 10px;
+}
+.selected{
+ background-color: orange !important;
 }
 /*================== Classes para controle JS ========================*/
 .expansion{
