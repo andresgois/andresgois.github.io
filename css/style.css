@@ -1,9 +1,48 @@
 /*================== Configurações Gerais ===========================*/
-*{margin: 0;padding: 0; font-size:1em; background-color: #eee;}
+*{margin: 0;
+  padding: 0; 
+  font-size:1em; 
+  background-color: #eee;
+  width: 100%;
+}
 a{text-decoration: none;}
 ul{list-style: none;}
-
+/*================== Container Principal =============================*/
+.container{
+  border: 1px solid red;
+  display: flex;
+}
+#menu{
+  border: 1px solid #000;
+  width: 0;
+}
+#conteudo{
+  border: 1px solid #000;
+  width: 100%;
+  height: auto;
+  background-color: #ccc;
+  display: flex;
+  flex: 1 1 300px;
+  flex-wrap: wrap;
+}
 /*================== Tela Direita ====================================*/
 
 
 /*================== Tela Esquerda ===================================*/
+#expansion{
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  line-height: 30px;
+  text-align: center;
+  color: #fff;
+  cursor: pointer;
+  background: linear-gradient(to right, crimson, orange);  
+}
+/*================== Classes para controle JS ========================*/
+.expansion{
+  width: 80%;
+}
+.contraction{
+  
+}
