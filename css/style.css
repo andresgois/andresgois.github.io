@@ -44,12 +44,13 @@ img{max-width: 100%;}
   flex-wrap: wrap;
   background-color: #fff;
 }
-.perfil .img_perfil{
+.img_perfil{
   width: 60% !important;
   display: block;
   margin: 10px auto;
   border-radius: 50%;
-  box-shadow: 1px 2px 5px 2px #ccc;
+  padding: 2px;
+  background-color: #eee;
 }
 #contraction{
   
@@ -64,4 +65,16 @@ img{max-width: 100%;}
 }
 .contraction{
   
+}
+/*================== Media Querias WIDE SCREEN =====================*/
+@media screen and (min-width: 980px){
+  #contraction, #expansion{
+    display: none !important;    
+  } 
+  #menu{
+    width: 40% !important;    
+  }
+  #conteudo{
+    width: 60% !important;    
+  }
 }
