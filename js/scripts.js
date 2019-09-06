@@ -36,6 +36,7 @@ window.load = setInterval(function(){
     }
 }, 3000); 
 
+
 var numberBg =1;
 
 function slide(n){
