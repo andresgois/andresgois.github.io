@@ -72,12 +72,14 @@ main{
   width: 80%;
   font-size: 1.6rem;
   padding: 10px;
+  margin: 0 auto;
 }
 .info p{
   font-size: 0.9rem;
-  text-align: center;
+  text-align: center !important;
   padding: 20px 0px; 
   width: 200px;
+  margin: 0 auto;
 }
 .info-lista ul{
   width: 75%;
@@ -143,6 +145,7 @@ main{
   } 
   #menu{
     width: 28% !important;    
+    opacity: 1;
   }
   #conteudo{
     width: 70% !important;    
