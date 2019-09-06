@@ -28,7 +28,6 @@ contraction.addEventListener('click', function(){
 
 let n = 1;
 window.load = setInterval(function(){
-    console.log(n);
     slide(n);
     n++;
     if(n>2){
