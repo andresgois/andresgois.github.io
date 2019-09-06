@@ -50,6 +50,7 @@ main{
   background-color: #fff;
   transition: 1s;
   background-color: #eee;
+  opacity:0;
 }
 .img_perfil{
   width: 60% !important;
@@ -64,7 +65,6 @@ main{
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  align-items: center;
 }
 .info h2{
   text-align: center;
@@ -135,9 +135,6 @@ main{
 /*================== Classes para controle JS ========================*/
 .expansion{
   width: 70% !important;
-}
-.contraction{
-  
 }
 /*================== Media Querias WIDE SCREEN =====================*/
 @media screen and (min-width: 980px){

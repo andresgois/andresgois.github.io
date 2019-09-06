@@ -15,6 +15,7 @@ expansion.addEventListener('click', function(){
    conteudo.style.marginRight='-60%';
    expansion.style.display='none';
    contraction.style.display='block';
+   menu.style.opacity='1';
 });
 
 contraction.addEventListener('click', function(){
@@ -22,6 +23,7 @@ contraction.addEventListener('click', function(){
    conteudo.style.marginRight='0%';
    contraction.style.display='none';
    expansion.style.display='block';
+   menu.style.opacity='0';
 });
 
 let n = 1;
@@ -32,7 +34,7 @@ window.load = setInterval(function(){
     if(n>2){
         n=1;
     }
-}, 2000); 
+}, 3000); 
 
 var numberBg =1;
 
