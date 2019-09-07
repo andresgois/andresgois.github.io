@@ -1,9 +1,6 @@
 /*================== Configurações Gerais ===========================*/
-*{margin: 0;
-  padding: 0; 
-  font-size:1em; 
-  width: 100%;
-/*! visibility: visible; */
+*{margin: 0;  padding: 0;   font-size:1em;   width: 100%;
+  /*border: 1px solid red;*/
 }
 a{text-decoration: none;}
 ul{list-style: none;}
@@ -15,18 +12,10 @@ main{
 }
 .container{  
   display: flex;
-  height: auto;
 }
 #menu{
   width: 0;
-}
-#conteudo{
-  width: 100%;
-  height: auto;
-  background-color: #ccc;
-  display: flex;
-  flex: 1 1 300px;
-  flex-wrap: wrap;
+  opacity: 0;
 }
 /*================== Botões ====================================*/
 #contraction, #expansion{
@@ -40,6 +29,9 @@ main{
   cursor: pointer;
   background: linear-gradient(to right, crimson, orange);  
   z-index: 1;  
+}
+#expansion{
+  position: fixed;
 }
 /*================== Tela Direita ====================================*/
 #menu{
@@ -100,19 +92,70 @@ main{
 
 /*================== Tela Esquerda ===================================*/
 #conteudo{
-  display: flex;  
-  justify-content: start;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
   position: relative;
   transition: 1s;
+  background-color: #ccc;
 }
-.imagens{
-  position: absolute;
+/*---------- Sobre ----------*/
+#Sobre, #Projetos{
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  margin-top: 30px;
+  padding: 10px;
+}
+#Sobre{
+  width: 100%;  
+  box-sizing: border-box;
+  align-items: flex-start;
+  margin-left: 10px;
+  width: 95%;
+  text-align: justify;
+  background-color: #eee;
+  border-radius: 20px; 
+  /*margin-left: -50px;
+  opacity: 0;
+  transition: all 1s;*/
+}
+#Sobre h1:first-child{
+  margin-top:10px; 
+}
+.sobre-titulo{
+  padding: 2px;
+  color: 		#4F4F4F;
+  font-size: 1.2rem;
+}
+.sobre-paragrafo{
+  font-size: 0.9rem;
+  padding-top: 10px;
+}
+#Projetos aside{
+  border-bottom: 5px solid tomato;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: #fff;
+  width: 90%;
+  margin: 10px 0px;
+  font-size: 1.2rem;
+}
+#Projetos aside i{
+  margin-bottom: 15px;
+  font-size: 1.8rem;
+  color: tomato;
+}
+#Projetos .projetos02 i{
+  color: #778899;
 }
 
+/*---------- Botóes ----------*/
 #botoes{
   display: flex;
   flex-direction: column;
   align-items: start;
+  position: absolute;
 }
 /* bolas  */
 #botoes {
