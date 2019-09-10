@@ -123,9 +123,6 @@ main{
   text-align: justify;
   background-color: #eee;
   border-radius: 10px 0; 
-  /*margin-left: -50px;
-  opacity: 0;
-  transition: all 1s;*/
 }
 #Sobre h1:first-child{
   margin-top:10px; 
@@ -286,7 +283,24 @@ main{
 .expansion{
   width: 70% !important;
 }
-/*================== Media Querias WIDE SCREEN =====================*/
+/*================== Animação ========================================*/
+[data-anime]{
+  opacity: 0;
+  transition: .3s;
+}
+[data-anime="left"]{
+  transform: translate3d(-50px,0,0);
+}
+[data-anime="right"]{
+  transform: translate3d(50px,0,0);
+}
+[data-anime].animate{
+  opacity: 1;
+  transform: translate3d(0,0,0);
+}
+
+
+/*================== Media Querias WIDE SCREEN =======================*/
 @media screen and (min-width: 980px){
   #contraction, #expansion{
     display: none !important;    

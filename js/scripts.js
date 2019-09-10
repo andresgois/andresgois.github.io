@@ -9,6 +9,27 @@ const conteudo = document.querySelector('#conteudo');
 /* Variaveis do collapse	*/
 const img = document.querySelector('.imagens img');
 
+/* Variaveis para controle da linha do tempo na section Experiência */
+const alturaExp01 = document.querySelector('.descricao-empresa');
+const mt = document.querySelector('#Experiencia .linha i:nth-child(2n+1)');
+
+
+// Debounce do Loadsh
+const debounce = function(func, wait, imediate){
+  let timeout;
+  return function(...args){
+    const context = this;
+    const later = function(){
+      timeout = null;
+      if(!imediate) func.apply(context, args);
+    };
+    const callNow = imediate && !timeout;
+    clearTimeout(timeout);
+    timeout = setTimeout(later, wait);
+    if(callNow) func.apply(context, args);
+  };
+};
+/* fim */
 
 expansion.addEventListener('click', function(){
    menu.classList.add('expansion');
@@ -58,12 +79,10 @@ function botoes(n, m){
 }
 
 
-const alturaExp01 = document.querySelector('.descricao-empresa');
-const mt = document.querySelector('#Experiencia .linha i:nth-child(2n+1)');
+
 
 function altura(){
   var tam = alturaExp01.clientHeight;  
-  console.log(tam);
   mt.style.marginTop = (tam-40)+'px';
 }
 
@@ -72,3 +91,28 @@ altura();
 window.addEventListener('resize', function (){
   altura();
 });
+
+
+const target = document.querySelectorAll('[data-anime]');
+const animateClass = 'animate';
+
+function animeScroll(){
+  const windowTop = window.pageYOffset + ((window.innerHeight * 3) / 4);
+  //console.log(windowTop);
+  target.forEach(function(element){
+    if((windowTop) > element.offsetTop){
+      element.classList.add(animateClass);
+    }else{
+      element.classList.remove(animateClass);
+    }
+  })
+}
+
+animeScroll();
+
+
+if(target.length){
+  window.addEventListener('scroll', debounce(function(){
+    animeScroll();
+  },200));
+}
