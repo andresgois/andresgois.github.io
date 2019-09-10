@@ -95,27 +95,34 @@ main{
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  align-items: flex-start;
   position: relative;
   transition: 1s;
   background-color: #ccc;
+}
+#conteudo-geral{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 }
 /*---------- Sobre ----------*/
 #Sobre, #Projetos{
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  margin-top: 30px;
+  align-items: center;
+  margin-top: 20px;
   padding: 10px;
 }
-#Sobre{
-  width: 100%;  
+#Sobre{ 
   box-sizing: border-box;
   align-items: flex-start;
   margin-left: 10px;
-  width: 95%;
+  width: 90%;
   text-align: justify;
   background-color: #eee;
-  border-radius: 20px; 
+  border-radius: 10px 0; 
   /*margin-left: -50px;
   opacity: 0;
   transition: all 1s;*/
@@ -132,7 +139,7 @@ main{
   font-size: 0.9rem;
   padding-top: 10px;
 }
-#Projetos aside{
+#Projetos aside, #Academico{
   border-bottom: 5px solid tomato;
   padding: 20px;
   box-sizing: border-box;
@@ -141,6 +148,9 @@ main{
   margin: 10px 0px;
   font-size: 1.2rem;
 }
+#Projetos aside:last-child{
+  border-bottom-color: #778899; 
+}
 #Projetos aside i{
   margin-bottom: 15px;
   font-size: 1.8rem;
@@ -148,6 +158,101 @@ main{
 }
 #Projetos .projetos02 i{
   color: #778899;
+}
+#Academico{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+  margin: 40px 0px 10px 10px; 
+  border-bottom: 5px solid blue;  
+}
+#Academico i{
+  transform: rotate(-46deg);
+  color: #fff;
+  padding: 6px 4px;
+}
+#Academico h3{
+  text-align: center;
+  font-size: 1.1rem;
+  padding: 30px 0px;
+}
+#Academico p{
+  text-align: justify;
+  font-size: 1rem;
+}
+#Experiencia{
+  display: flex;
+  width: 90%;
+  margin-top: 20px;
+  position: relative;
+}
+#Experiencia .linha{
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center; 
+  text-align: center;
+  padding-top: 10px;
+  width: 35%;
+}
+#Experiencia .linha i{
+  color: #fff;
+  background-color: #00f;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  z-index: 3;  
+}
+#Experiencia .linha i:nth-child(2n+1){
+  margin-top: 320%; /* Modificar com JS*/
+}
+#Experiencia .linha-vertical{
+  width: 8px;
+  height: 200px;
+  position: absolute;
+  background-color: #fff;
+  height: 95%;
+}
+#Experiencia .descricao{
+  
+}
+#Experiencia h3{
+  display: inline-block;
+}
+.ano{
+  font-size: 0.8rem;
+  color: #ccc;
+  margin-left: 15px;
+}
+#Experiencia .descricao-empresa{
+  margin-top: 10px;
+  box-sizing: border-box;
+  background-color: #fff;
+  padding: 20px 10px;
+  text-align: justify;
+  position: relative;
+}
+.descricao-empresa::after{
+  content: "";
+  position: absolute;
+  top: 10%;
+  right: 100%;
+  margin-top: -5px;
+  border-width: 10px;
+  border-style: solid;
+  border-color: transparent #fff transparent transparent;
+}
+.icone{
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  transform: rotate(46deg);
+  background-color:  #00f;
+  top: -30px;;
 }
 
 /*---------- Botóes ----------*/
@@ -191,5 +296,10 @@ main{
   }
   #conteudo{
     width: 70% !important;    
+  }
+}
+@media screen and (min-width: 720px){
+  #Experiencia .linha{
+    width: 20%;
   }
 }
