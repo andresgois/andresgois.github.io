@@ -185,6 +185,7 @@ main{
 #Experiencia{
   display: flex;
   width: 90%;
+  height: auto;
   margin-top: 20px;
   position: relative;
 }
@@ -208,14 +209,15 @@ main{
   z-index: 3;  
 }
 #Experiencia .linha i:nth-child(2n+1){
-  margin-top: 320%; /* Modificar com JS*/
+  margin-top: 13rem; /* Modificar com JS*/
+  background-color: tomato;
 }
 #Experiencia .linha-vertical{
   width: 8px;
   height: 200px;
   position: absolute;
   background-color: #fff;
-  height: 95%;
+  height: 20rem;
 }
 #Experiencia .descricao{
   

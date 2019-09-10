@@ -56,3 +56,19 @@ function botoes(n, m){
         }
     }
 }
+
+
+const alturaExp01 = document.querySelector('.descricao-empresa');
+const mt = document.querySelector('#Experiencia .linha i:nth-child(2n+1)');
+
+function altura(){
+  var tam = alturaExp01.clientHeight;  
+  console.log(tam);
+  mt.style.marginTop = (tam-40)+'px';
+}
+
+altura();
+
+window.addEventListener('resize', function (){
+  altura();
+});
