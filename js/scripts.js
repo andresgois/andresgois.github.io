@@ -6,12 +6,29 @@ const contraction = document.getElementById('contraction');
 const menu = document.querySelector('#menu');
 const conteudo = document.querySelector('#conteudo');
 
-/* Variaveis do collapse	*/
+/* Variáveis do collapse	*/
 const img = document.querySelector('.imagens img');
 
-/* Variaveis para controle da linha do tempo na section Experiência */
+/* Variáveis para controle da linha do tempo na section Experiência */
 const alturaExp01 = document.querySelector('.descricao-empresa');
 const mt = document.querySelector('#Experiencia .linha i:nth-child(2n+1)');
+
+/* Variáveis de constrole de animação */
+const target = document.querySelectorAll('[data-anime]');
+const animateClass = 'animate';
+
+/* Variáveis */
+let n = 1;
+var numberBg =1;
+
+/* Ao Carregar */
+window.load = setInterval(function(){
+    slide(n);
+    n++;
+    if(n>2){
+        n=1;
+    }
+}, 3000); 
 
 
 // Debounce do Loadsh
@@ -31,6 +48,9 @@ const debounce = function(func, wait, imediate){
 };
 /* fim */
 
+
+/* Eventos que serão chamados */
+
 expansion.addEventListener('click', function(){
    menu.classList.add('expansion');
    conteudo.style.marginRight='-60%';
@@ -47,17 +67,12 @@ contraction.addEventListener('click', function(){
    menu.style.opacity='0';
 });
 
-let n = 1;
-window.load = setInterval(function(){
-    slide(n);
-    n++;
-    if(n>2){
-        n=1;
-    }
-}, 3000); 
+window.addEventListener('resize', function (){
+  altura();
+});
 
 
-var numberBg =1;
+/*  Funções */
 
 function slide(n){
 	var allBs = 2;
@@ -79,8 +94,6 @@ function botoes(n, m){
 }
 
 
-
-
 function altura(){
   var tam = alturaExp01.clientHeight;  
   mt.style.marginTop = (tam-40)+'px';
@@ -88,13 +101,7 @@ function altura(){
 
 altura();
 
-window.addEventListener('resize', function (){
-  altura();
-});
 
-
-const target = document.querySelectorAll('[data-anime]');
-const animateClass = 'animate';
 
 function animeScroll(){
   const windowTop = window.pageYOffset + ((window.innerHeight * 3) / 4);

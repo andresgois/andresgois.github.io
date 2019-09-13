@@ -136,7 +136,8 @@ main{
   font-size: 0.9rem;
   padding-top: 10px;
 }
-#Projetos aside, #Academico{
+/*---------- Projetos ----------*/
+#Projetos aside, #Academico, #Cursos{
   border-bottom: 5px solid tomato;
   padding: 20px;
   box-sizing: border-box;
@@ -156,7 +157,8 @@ main{
 #Projetos .projetos02 i{
   color: #778899;
 }
-#Academico{
+/*---------- Academico ----------*/
+#Academico, #Cursos{
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -165,7 +167,7 @@ main{
   margin: 40px 0px 10px 10px; 
   border-bottom: 5px solid blue;  
 }
-#Academico i{
+#Academico i, #Cursos .icone i{
   transform: rotate(-46deg);
   color: #fff;
   padding: 6px 4px;
@@ -179,6 +181,7 @@ main{
   text-align: justify;
   font-size: 1rem;
 }
+/*---------- Experiência ----------*/
 #Experiencia{
   display: flex;
   width: 90%;
@@ -234,6 +237,40 @@ main{
   padding: 20px 10px;
   text-align: justify;
   position: relative;
+}
+/*---------- Curso ----------*/
+#Cursos i{
+  font-size: 3rem;
+  text-align: center;
+}
+#Cursos{
+  border-bottom: none;
+}
+.curso{
+  padding: 15px 2px;
+  border-bottom: 4px solid tomato;
+}
+.curso h4{
+  text-align: center;
+  border-bottom: 2px solid tomato;
+  padding-bottom: 2px;
+}
+.curso strong{
+  font-size: 0.9rem;
+  display: block;
+}
+.curso p{
+  text-align: justify;
+  font-size: 1.1rem;
+}
+.curso em{
+  font-size: .9rem;
+}
+.curso:nth-child(2n+1){
+  border-bottom: 4px solid blue;
+}
+.curso:nth-child(2n+1) h4{
+  border-bottom: 2px solid blue;
 }
 .descricao-empresa::after{
   content: "";
