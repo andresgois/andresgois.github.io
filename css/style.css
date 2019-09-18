@@ -219,9 +219,6 @@ main{
   background-color: #fff;
   height: 20rem;
 }
-#Experiencia .descricao{
-  
-}
 #Experiencia h3{
   display: inline-block;
 }
@@ -247,6 +244,7 @@ main{
   border-bottom: none;
   background-color: #ccc;
   border: 4px solid #fff;
+  transition: 1s;
 }
 #Cursos .icone{
   z-index: 2;
